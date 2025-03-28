@@ -22,8 +22,23 @@ const Header = () => {
   );
 };
 
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <h3>Fauji Dhaba</h3>
+    </div>
+  );
+};
+
 const Body = () => {
-  return <div className="body">body</div>;
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
 };
 
 const AppLayout = () => {
