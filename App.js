@@ -25,7 +25,7 @@ const Header = () => {
 const RestaurantCard = () => {
   return (
     <div className="res-card">
-      <h3>Fauji Dhaba</h3>
+      <h3>Fauji ka Dhaba</h3>
     </div>
   );
 };
