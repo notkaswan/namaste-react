@@ -25,6 +25,10 @@ const Header = () => {
 const RestaurantCard = () => {
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+      <img
+        alt="res-logo"
+        src="https://b.zmtcdn.com/data/pictures/chains/0/21365950/8e4749024293dd432818a9717737440a.jpeg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+      />
       <h3>Fauji ka Dhaba</h3>
     </div>
   );
