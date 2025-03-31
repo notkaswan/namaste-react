@@ -24,7 +24,7 @@ const Header = () => {
 
 const RestaurantCard = () => {
   return (
-    <div className="res-card">
+    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <h3>Fauji ka Dhaba</h3>
     </div>
   );
