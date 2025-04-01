@@ -769,7 +769,7 @@ const resObj = [
     },
   },
 ];
-console.log(resObj);
+// console.log(resObj);
 const RestaurantCard = ({ resData }) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
     resData?.info;
@@ -798,7 +798,7 @@ const Body = () => {
       <div className="search">Search</div>
       <div className="res-container">
         {resObj.map((restaurant) => (
-          <RestaurantCard resData={restaurant} />
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>
