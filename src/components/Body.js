@@ -1,3 +1,5 @@
+import RestaurantCard from "./RestaurantCard";
+
 const Body = () => {
   return (
     <div className="body">
@@ -10,3 +12,5 @@ const Body = () => {
     </div>
   );
 };
+
+export default Body;
