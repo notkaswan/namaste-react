@@ -771,19 +771,6 @@ const RestaurantCard = ({ resData }) => {
   );
 };
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {resObj.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const AppLayout = () => {
   return (
     <div>
