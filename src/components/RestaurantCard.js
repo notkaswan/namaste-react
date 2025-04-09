@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constants";
+//hardcoding removed.
 
 const RestaurantCard = ({ resData }) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
