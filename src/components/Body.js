@@ -1,9 +1,15 @@
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resObj);
+
+  useEffect(() => {
+    console.log("EFFECt rendered");
+  }, []);
+
+  console.log("body rendered.");
 
   return (
     <div className="body">
