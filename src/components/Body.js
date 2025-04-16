@@ -1,9 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
-import resObj from "../utils/mockData";
 import { useEffect, useState } from "react";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resObj);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   useEffect(() => {
     fetchData();
