@@ -4,14 +4,14 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import About from "./src/components/About";
 import Contact from "./src/components/Contact";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./src/components/Error";
 
 const AppLayout = () => {
   return (
     <div>
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
@@ -20,8 +20,12 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: <Error />,
-  },
+    children: [
+      {
+        path: "/",
+        element: <Body />
+      },
+      
   {
     path: "/about",
     element: <About />
@@ -30,6 +34,9 @@ const appRouter = createBrowserRouter([
     path: "/contact",
     element: <Contact />
   }
+    ],
+    errorElement: <Error />,
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
