@@ -3,6 +3,7 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = ({ resData }) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
     resData?.info;
+    
   return (
     <div className="m-4 p-4 w-[250px] rounded-lg" style={{ backgroundColor: "#f0f0f0" }}>
       <img
@@ -18,5 +19,16 @@ const RestaurantCard = ({ resData }) => {
     </div>
   );
 };
+
+//Higher order component
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    <div>
+      <label>Promoted</label>
+      <RestaurantCard {...props}/>
+    </div>
+  }
+}
 
 export default RestaurantCard;

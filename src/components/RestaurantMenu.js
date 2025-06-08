@@ -13,7 +13,7 @@ const RestaurantMenu = () => {
     if (resData === null) return <Shimmer />;
     const resInfo = resData?.cards[2]?.card?.card?.info
     const resMenuInfo = resData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards
-    // console.log(resData.cards[2])
+    console.log(resData)
     return (
         <div className="menu">
             <h1>{resInfo?.name}</h1>
