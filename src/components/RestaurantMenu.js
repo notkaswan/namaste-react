@@ -13,18 +13,13 @@ const RestaurantMenu = () => {
     if (resData === null) return <Shimmer />;
     const resInfo = resData?.cards[2]?.card?.card?.info
     const resMenuInfo = resData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards
-    console.log(resData)
+    console.log(resData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"))
     return (
-        <div className="menu">
-            <h1>{resInfo?.name}</h1>
-            <h2>{resInfo?.areaName}, {resInfo?.city}</h2>
-            <h3>{resInfo?.costForTwoMessage}</h3>
-            <h2>menu</h2>
-            <ul>
-                {resMenuInfo != null && resMenuInfo.map((item) => (
-                    <li key={item.card.info.id}>{item.card.info.name} - {item.card.info.defaultPrice/100 || item.card.info.price/100}</li>
-                ))}
-            </ul>
+        <div className="text-center">
+            <h1 className="font-bold text-2xl mt-10">{resInfo?.name}</h1>
+            <h2 className="italic">{resInfo?.areaName}, {resInfo?.city}</h2>
+            <h3 className="italic">{resInfo?.costForTwoMessage}</h3>
+            
         </div>
     )
 }

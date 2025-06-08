@@ -67,7 +67,6 @@ const Body = () => {
             { 
               restaurant.info.promoted ? <RestaurantCardPromoted resData={restaurant} /> : <RestaurantCard resData={restaurant} />
             }
-            {console.log(restaurant.info)}
             </Link>
         ))}
       </div>
