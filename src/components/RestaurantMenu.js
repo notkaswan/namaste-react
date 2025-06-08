@@ -21,7 +21,7 @@ const RestaurantMenu = () => {
             <h2 className="italic">{resInfo?.areaName}, {resInfo?.city}</h2>
             <h3 className="italic">{resInfo?.costForTwoMessage}</h3>
             {categories.map((category) =>(
-                <RestaurantCategory data = {category?.card?.card}/>
+                <RestaurantCategory key={category?.card?.card.title} data = {category?.card?.card}/>
             ))}
         </div>
     )
